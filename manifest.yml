@@ -1,0 +1,6 @@
+---
+applications:
+- name: pasdemo
+  memory: 1G
+  instances: 1
+  path: ./target/pasdemo-0.0.1-SNAPSHOT.jar
