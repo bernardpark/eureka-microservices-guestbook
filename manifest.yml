@@ -1,6 +1,6 @@
 ---
 applications:
-- name: pasdemo
+- name: pcf-ms-guestbook
   memory: 1G
   instances: 1
-  path: ./target/pasdemo-0.0.1-SNAPSHOT.jar
+  path: ./target/guestbook-0.0.1-SNAPSHOT.jar

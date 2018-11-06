@@ -98,12 +98,12 @@ public class Guest implements Serializable {
 			return false;
 		return true;
 	}
+	
 	@Override
 	public String toString() {
-		return "GuestForm [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+		return "Guest [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", dateAdded=" + dateAdded + ", areYouLate=" + areYouLate + "]";
 	}
-	
 	public void clear() {
 		this.firstName = null;
 		this.lastName = null;
