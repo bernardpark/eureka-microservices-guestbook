@@ -4,3 +4,7 @@ applications:
   memory: 1G
   instances: 1
   path: ./target/guestbook-0.0.1-SNAPSHOT.jar
+  env:
+    spring.profiles.active: cloud
+  services:
+  - eureka-server

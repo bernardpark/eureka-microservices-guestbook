@@ -31,6 +31,7 @@ public class GuestbookController {
 		guest.setId( ID_GENERATOR.getAndIncrement() + "" );
 		guest.setDateAdded( new Date() );
 		guestRepository.add( guest.getId(), guest );
+		System.out.println( "Added Guest: " + guest.toString() );
 		return new ResponseEntity<Guest>( guest, HttpStatus.OK );
 	}
 	
