@@ -1,5 +1,7 @@
 package com.bpark.guestbook.redis.pubsub;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
@@ -9,6 +11,9 @@ import com.bpark.guestbook.object.Guest;
 
 @Service
 public class GuestPublisher {
+	
+	Logger logger = LoggerFactory.getLogger( GuestPublisher.class );
+
 	
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
@@ -25,6 +30,7 @@ public class GuestPublisher {
     
     public void publish( final Guest guestEntry ) {
         redisTemplate.convertAndSend( topic.getTopic(), guestEntry );
+        logger.trace( "Published " + guestEntry.toString() + " to " + topic.getTopic().toString() + "." );
     }
     
 }
