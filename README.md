@@ -1,6 +1,9 @@
-# demo-application
-Demo application for spring mvc on spring boot.
+# Eureka Microservices Zuul Example
+This repository contains a Eureka Zuul service. It is part of a simple Eureka implementation.
 
-Designed to be pushed to a cf instance. Make sure you bind the application to a Redis instance.
+Visit the following repository for instructions on how to deploy locally and to a Cloud Foundry foundation.
 
-This can be run locally with a local Redis instance.
+* [eureka-microservices-demo](https://github.com/bernardpark/eureka-microservices-demo) - Eureka Server and deployment instructions
+
+## Authors
+* **Bernard Park** - [Github](https://github.com/bernardpark)
